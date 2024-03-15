@@ -1,0 +1,23 @@
+.navbar {
+    display: grid;
+    grid-template-areas: "start center end";
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: red;
+}
+.start {
+    grid-area: "start";
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.center {
+    grid-area: "center";
+    display: flex;
+    justify-content: center;
+}
+.end {
+    grid-area: "end";
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
