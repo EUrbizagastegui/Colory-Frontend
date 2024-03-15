@@ -37,6 +37,14 @@
           }
         }
       }
+    },
+    {
+      "label": "Frontend",
+      "type": "shell",
+      "command": "ng serve",
+      "runOptions": {
+          "runOn": "folderOpen"
+      }
     }
   ]
 }
