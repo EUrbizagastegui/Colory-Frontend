@@ -1,0 +1,11 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+.home-footer {
+    margin-top: auto;
+}
+.home-img {
+    max-width: 2.5rem;
+}

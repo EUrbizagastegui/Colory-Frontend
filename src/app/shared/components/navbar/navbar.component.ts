@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,10 +8,5 @@ import { Component, Input, ElementRef } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  @Input() start: string = '';
-  @Input() center: string = '';
-  @Input() end: string = '';
-  @Input() startType: string = '';
-  @Input() centerType: string = '';
-  @Input() endType: string = '';
+
 }

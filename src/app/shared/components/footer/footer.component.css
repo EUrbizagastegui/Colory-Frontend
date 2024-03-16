@@ -1,22 +1,21 @@
-.navbar {
+.footer {
     display: grid;
     grid-template-areas: "start center end";
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: red;
+    background-color: aqua;
 }
-.navbar-start {
+.footer-start {
     grid-area: "start";
     display: flex;
     justify-content: start;
     align-items: center;
 }
-.navbar-center {
+.footer-center {
     grid-area: "center";
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-.navbar-end {
+.footer-end {
     grid-area: "end";
     display: flex;
     justify-content: end;

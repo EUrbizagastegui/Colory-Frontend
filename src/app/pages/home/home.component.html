@@ -1,8 +1,13 @@
-<app-navbar
-    [start]="start"
-    [center]="center"
-    [end]="end"
-    [startType]="startType"
-    [centerType]="centerType"
-    [endType]="endType"
-></app-navbar>
+<div class="home">
+    <app-navbar>
+        <img navbar-start class="home-img" src="../../../assets/images/colory.png" alt="">
+        <h1 navbar-center>Colory</h1>
+        <div navbar-end>
+            <button>Iniciar sesion</button>
+            <button>Registrarse</button>
+        </div>
+    </app-navbar>
+    <app-footer class="home-footer">
+        <p footer-center>&#64;Erick Gabriel Urbizagastegui Alvarez - 2024</p>
+    </app-footer>
+</div>

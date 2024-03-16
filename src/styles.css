@@ -1,3 +1,22 @@
 * {
     margin: 0;
 }
+body {
+    font-family: 'Comfortaa', sans-serif;
+}
+h1 {
+    font-size: clamp(1.5rem, 5dvw, 2.5rem);
+}
+h2 {
+    font-size: clamp(1.25rem, 5dvw, 1.5rem);
+}
+h3 {
+    font-size: clamp(1rem, 5dvw, 1.25rem);
+}
+p {
+    font-size: clamp(0.75rem, 5dvw, 1rem);
+}
+button {
+    font-size: clamp(0.5em, 5dvw, 1em);
+    padding: 0.5em;
+}
