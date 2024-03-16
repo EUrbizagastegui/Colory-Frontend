@@ -1,24 +1,22 @@
 .navbar {
+    position: relative;
     display: grid;
-    grid-template-areas: "start center end";
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: red;
+    grid-template-areas: "start end";
+    grid-template-columns: 25% 75%;
+    padding: 1em;
+    background-color: transparent;
 }
-.navbar-start {
-    grid-area: "start";
-    display: flex;
-    justify-content: start;
-    align-items: center;
+.navbar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px; /* Grosor de la línea */
+    background: linear-gradient(to right, transparent 0%, #000 20%, #000 80%, transparent 100%);
 }
-.navbar-center {
-    grid-area: "center";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.navbar-end {
-    grid-area: "end";
-    display: flex;
-    justify-content: end;
-    align-items: center;
+@media (max-width: 767px) {
+    .navbar {
+
+    }
 }

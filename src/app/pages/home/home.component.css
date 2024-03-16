@@ -3,9 +3,23 @@
     flex-direction: column;
     min-height: 100dvh;
 }
+.home-navbar-start {
+    grid-area: start;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.home-navbar-start-img {
+    max-width: 2.5rem;
+}
+.home-navbar-end {
+    grid-area: end;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1em;
+    margin-right: 1em;
+}
 .home-footer {
     margin-top: auto;
-}
-.home-img {
-    max-width: 2.5rem;
 }
