@@ -17,9 +17,11 @@ export class HomeComponent {
     "Registrarse"
   ]
 
+  isDarkTransparentBgOpen: boolean = false;
   menuOpen: boolean = false;
 
   toggleMenu() {
+    this.isDarkTransparentBgOpen = !this.isDarkTransparentBgOpen;
     this.menuOpen = !this.menuOpen;
   }
 }

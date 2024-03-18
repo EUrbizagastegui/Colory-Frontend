@@ -32,6 +32,13 @@
     cursor: pointer;
 }
 
+.dark-transparent-bg {
+    position: fixed;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(59, 59, 59, 0.527);
+}
+
 .home-navbar-end-small-container-menu {
     position: fixed;
     right: 0;
