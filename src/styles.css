@@ -3,7 +3,7 @@
     font-family: 'Comfortaa', sans-serif;
 }
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 h1 {
     font-size: clamp(1.5rem, 5dvw, 2.5rem);

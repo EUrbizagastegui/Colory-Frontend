@@ -33,7 +33,7 @@
 }
 
 .home-navbar-end-small-container-menu {
-    position: absolute;
+    position: fixed;
     right: 0;
     display: flex;
     flex-direction: column;
