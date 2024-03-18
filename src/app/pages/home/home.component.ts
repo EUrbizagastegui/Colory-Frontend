@@ -10,5 +10,16 @@ import { FooterComponent } from '../../shared/components/footer/footer.component
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  
+  navbarOptions = [
+    "Extraer colores",
+    "Monocromáticos",
+    "Iniciar sesion",
+    "Registrarse"
+  ]
+
+  menuOpen: boolean = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }

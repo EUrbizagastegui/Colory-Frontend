@@ -2,7 +2,7 @@
     position: relative;
     display: grid;
     grid-template-areas: "start end";
-    grid-template-columns: 25% 75%;
+    grid-template-columns: auto auto;
     padding: 1em;
     background-color: transparent;
 }
@@ -14,9 +14,4 @@
     bottom: 0;
     height: 1px; /* Grosor de la línea */
     background: linear-gradient(to right, transparent 0%, #000 20%, #000 80%, transparent 100%);
-}
-@media (max-width: 767px) {
-    .navbar {
-
-    }
 }
