@@ -1,8 +1,19 @@
 .footer {
+    position: relative;
     display: grid;
     grid-template-areas: "start center end";
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: aqua;
+    padding: 1em;
+    background-color: transparent;
+}
+.footer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px; /* Grosor de la línea */
+    background: linear-gradient(to right, transparent 0%, #000 20%, #000 80%, transparent 100%);
 }
 .footer-start {
     grid-area: "start";

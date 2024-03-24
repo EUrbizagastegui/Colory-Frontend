@@ -35,6 +35,14 @@
         }
     </div>
 
+    <div class="home-body">
+        <div class="home-initial-palette">
+            @for (color of initialColorPalette; track $index) {
+                <div class="home-initial-palette-color" [style.background-color]="color"></div>
+            }
+        </div>
+    </div>
+
     <app-footer class="home-footer">
         <p footer-center>&#64;Erick Gabriel Urbizagastegui Alvarez - 2024</p>
     </app-footer>

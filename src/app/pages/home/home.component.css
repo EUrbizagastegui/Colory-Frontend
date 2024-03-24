@@ -80,3 +80,18 @@
         align-items: center;
     }
 }
+
+.home-body {
+    display: flex;
+    justify-content: center;
+}
+
+.home-initial-palette {
+    display: flex;
+    flex-direction: row;
+}
+
+.home-initial-palette-color {
+    width: 5rem;
+    height: 10rem;
+}
