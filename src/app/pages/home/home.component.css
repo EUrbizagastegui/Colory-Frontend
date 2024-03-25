@@ -88,15 +88,52 @@
     justify-content: center;
 }
 
-.home-palette {
+.home-initial-palette {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
+    width: 40%;
 }
 
-.home-palette-color {
-    width: 5rem;
+.home-initial-palette-color {
+    min-width: 20%;
+    max-width: 10rem;
     height: 10rem;
 }
+
 .home-multicolor-palettes {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 80%; /* Asegura que el grid ocupe todo el ancho disponible */
+    max-width: 960px; /* Opcional: establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas grandes */
+    place-items: center;
+    place-content: center;
+    margin-block: 20px;
+}
+
+.home-multicolor-palette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.home-multicolor-palette-color {
+    width: 20%;
+    height: 10rem;
+}
+
+@media (max-width: 774px) {
+    .home-initial-palette {
+        width: 80%;
+    }
+}
+
+@media (max-width: 300px) {
+    .home-multicolor-palettes {
+        grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+    }
 }
