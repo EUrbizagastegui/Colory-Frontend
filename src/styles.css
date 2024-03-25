@@ -20,4 +20,7 @@ p {
 button {
     font-size: clamp(0.5em, 5dvw, 1em);
     padding: 0.5em;
+    border-radius: 0.5em;
+    border:transparent;
+    cursor: pointer;
 }

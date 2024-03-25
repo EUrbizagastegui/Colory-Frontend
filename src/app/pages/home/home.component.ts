@@ -24,13 +24,20 @@ export class HomeComponent implements OnInit {
   ]
 
   ngOnInit(): void {
-    this.initialColorPalette = this.generateColorGradientPalette(5);
+    this.randomizeInitialColorPalette();
     this.generateMultiColorPalettes(this.multiColorPalettes, 6);
   }
+  
 
   toggleMenu() {
     this.isDarkTransparentBgOpen = !this.isDarkTransparentBgOpen;
     this.menuOpen = !this.menuOpen;
+  }
+
+  //Randomizes the initial color palette
+  randomizeInitialColorPalette(): void {
+    this.initialColorPalette = [];
+    this.initialColorPalette = this.generateRandomColorPalette(5);
   }
 
   //Returns an array containing X random ordered colors

@@ -37,22 +37,31 @@
 
     <div class="home-body">
         <h1 class="home-body-title">Paleta aleatoria</h1>
+
         <div class="home-body-header">
             <div class="home-initial-palette">
                 @for (color of initialColorPalette; track $index) {
                     <div class="home-initial-palette-color" [style.background-color]="color"></div>
                 }
             </div>
-            <button>Volver a generar</button>
+
+            <button class="home-body-header-button" (click)="randomizeInitialColorPalette()">Volver a generar</button>
         </div>
-        <div class="home-multicolor-palettes">
-            @for (palette of multiColorPalettes; track $index) {
-                <div class="home-multicolor-palette">
-                    @for (color of palette; track $index) {
-                        <div class="home-multicolor-palette-color" [style.background-color]="color"></div>
-                    }
-                </div>
-            }
+
+        <div class="home-body-content">
+            <div class="home-multicolor-palettes-header">
+                <h1 class="home-body-title">Lista de paletas</h1>
+            </div>
+
+            <div class="home-multicolor-palettes">
+                @for (palette of multiColorPalettes; track $index) {
+                    <div class="home-multicolor-palette">
+                        @for (color of palette; track $index) {
+                            <div class="home-multicolor-palette-color" [style.background-color]="color"></div>
+                        }
+                    </div>
+                }
+            </div>
         </div>
     </div>
 

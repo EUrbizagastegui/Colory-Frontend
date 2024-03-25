@@ -109,21 +109,39 @@
     width: clamp(300px, 40%, 400px);
 }
 
+.home-initial-palette div:nth-child(1) {
+    border-radius: 0.5em 0 0 0.5em;
+}
+
+.home-initial-palette div:last-child {
+    border-radius: 0 0.5em 0.5em 0;
+}
+
+
 .home-initial-palette-color {
     min-width: 20%;
     max-width: 10rem;
     height: 10rem;
 }
 
+.home-body-header-button {
+    background-color: #d1dad8;
+    transition: 0.2s ease-in-out;
+    padding: 1em;
+}
+
+.home-body-header-button:hover {
+    background-color: #9fa5a4;
+}
+
 .home-multicolor-palettes {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1em;
-    width: 80%; /* Asegura que el grid ocupe todo el ancho disponible */
-    max-width: 960px; /* Opcional: establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas grandes */
+    width: 100%; /* Asegura que el grid ocupe todo el ancho disponible */
     place-items: center;
     place-content: center;
-    margin-block: 1em;
+    margin-bottom: 1em;
 }
 
 .home-multicolor-palette {
@@ -145,7 +163,6 @@
     }
 }
 
-
 @media (max-width: 375px) {
     .home-initial-palette {
         width: 80%;
@@ -154,4 +171,20 @@
     .home-multicolor-palettes {
         grid-template-columns: repeat(auto-fill, minmax(224px, 1fr)); /* 80% del ancho de la pantalla del galaxy fold */
     }
+}
+
+.home-body-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home-multicolor-palettes-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
 }
