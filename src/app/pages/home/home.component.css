@@ -83,15 +83,20 @@
 
 .home-body {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
-.home-initial-palette {
+.home-palette {
     display: flex;
     flex-direction: row;
 }
 
-.home-initial-palette-color {
+.home-palette-color {
     width: 5rem;
     height: 10rem;
+}
+.home-multicolor-palettes {
+    display: grid;
 }

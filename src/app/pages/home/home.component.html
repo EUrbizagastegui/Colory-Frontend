@@ -36,9 +36,18 @@
     </div>
 
     <div class="home-body">
-        <div class="home-initial-palette">
+        <div class="home-palette">
             @for (color of initialColorPalette; track $index) {
-                <div class="home-initial-palette-color" [style.background-color]="color"></div>
+                <div class="home-palette-color" [style.background-color]="color"></div>
+            }
+        </div>
+        <div class="home-multicolor-palettes">
+            @for (palette of multiColorPalettes; track $index) {
+                <div class="home-palette">
+                    @for (color of palette; track $index) {
+                        <div class="home-palette-color" [style.background-color]="color"></div>
+                    }
+                </div>
             }
         </div>
     </div>

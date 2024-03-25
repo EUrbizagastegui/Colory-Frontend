@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
   isDarkTransparentBgOpen: boolean = false;
   menuOpen: boolean = false;
   initialColorPalette: string[] = [];
+  multiColorPalettes: string[][] = [];
+  monoChromaticPalettes: string[][] = [];
 
   navbarOptions = [
     "Extraer colores",
@@ -23,7 +25,8 @@ export class HomeComponent implements OnInit {
   ]
 
   ngOnInit(): void {
-    this.generateColorPalette(this.initialColorPalette, 5);
+    this.initialColorPalette = this.generateColorPalette(5);
+    this.generateMultiColorPalettes(this.multiColorPalettes, 6);
   }
 
   toggleMenu() {
@@ -31,8 +34,10 @@ export class HomeComponent implements OnInit {
     this.menuOpen = !this.menuOpen;
   }
 
-  generateColorPalette(colorsArray: string[], numberOfColors: number) {
+  //Returns an array containing X random ordered colors
+  generateColorPalette(numberOfColors: number) {
     let temporaryArray: chroma.Color[] = [];
+    let colorsArray: string[] = [];
 
     for (let i = 0; i < numberOfColors; i++) {
       const color = chroma.random();
@@ -53,8 +58,24 @@ export class HomeComponent implements OnInit {
     });
 
     temporaryArray.forEach(color => {
-      console.log(color.get('hsl.h'));
       colorsArray.push(color.hex());
     })
+
+    return colorsArray;
+  }
+
+  generateMultiColorPalettes(originalArray: string[][], numberOfColors: number) {
+    let temporaryArray: string[] = [];
+    for (let i = 0; i < numberOfColors; i++) {
+      temporaryArray = this.generateColorPalette(5);
+
+      if (originalArray.includes(temporaryArray)) {
+        i--;
+        continue;
+      }
+
+      originalArray.push(temporaryArray);
+      temporaryArray = [];
+    }
   }
 }
